@@ -30,12 +30,19 @@ def writeCourseName(course_name, canvas):
 '''
 
 def writeCourseName(course_name, canvas):
+	canvas.setFont('Courier-Bold', 60)
+	canvas.drawCentredString(700 , 140 , "Coding Comprehensive Course")
 
 
-	canvas.setFont('Courier-Bold', 50)
-	canvas.drawCentredString(180 , 170 , course_name[0])
-	canvas.drawCentredString(180 , 220 , course_name[1])
-	canvas.drawCentredString(180 , 270 , course_name[2])
+
+def writeLevel(level, canvas):
+	canvas.setFont('Courier-Bold', 40)
+	canvas.drawCentredString(700 , 200 , "Level 1")
+
+
+def writeLevelName(level_name, canvas):
+	canvas.setFont('Courier-Bold', 40)
+	canvas.drawCentredString(700 , 250 , "Introduction to Coding & Computational thinking")
 
 
 #function to generate catalogue in pdf format
@@ -74,10 +81,11 @@ def generate_pdf():
 
 
 	course_name = ["Coding", "Comprehensive", "Course"]
-
+	level_name = "Introduction to Coding & Computational thinking"
+	level = 1
 	writeCourseName(course_name, canvas)
-
-
+	writeLevel(level, canvas)
+	writeLevelName(level_name, canvas)
 
 
 	# End the Page and Start with new
